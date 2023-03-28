@@ -43,8 +43,9 @@ def main():
 
     session = requests.Session()
     response = session.get(url)
-
+    
     soup = BeautifulSoup(response.text, 'html.parser')
+    print(soup)
     token = soup.find('input', {'name': 'authenticity_token'}).get('value')
 
     data = {
