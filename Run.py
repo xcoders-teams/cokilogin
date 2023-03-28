@@ -6,16 +6,16 @@ import random
 def change_url(option):
     url_dict = {
         '1': {'url': 'https://www.facebook.com/login', 'name': 'Facebook'},
-        '2': {'url': 'https://www.instagram.com/accounts/login/', 'name': 'Instagram'},
+        '2': {'url': 'https://www.instagram.com/accounts/login', 'name': 'Instagram'},
         '3': {'url': 'https://twitter.com/login', 'name': 'Twitter'},
         '4': {'url': 'https://accounts.google.com/signin/v2/identifier', 'name': 'Gmail'},
-        '5': {'url': 'https://www.youtube.com/', 'name': 'Youtube'},
+        '5': {'url': 'https://www.youtube.com', 'name': 'Youtube'},
         '6': {'url': 'https://discord.com/login', 'name': 'Discord'},
-        '7': {'url': 'https://web.telegram.org/k/', 'name': 'Telegram'}
+        '7': {'url': 'https://web.telegram.org/k', 'name': 'Telegram'}
     }
     try:
         url = url_dict[option]['url']
-        print(f"Sedang menyiapkan web {url_dict[option]['name']}")
+        print(f"Sedang menyiapkan web {url_dict[option]['name']}...")
         return url
     except KeyError:
         print("Maaf, pilihan tidak tersedia")
@@ -33,7 +33,8 @@ def print_colored_text(text):
 
 
 def main():
-    url_option = input("Masukkan pilihan URL:\n1. Facebook\n2. Instagram\n3. Twitter\n4. Gmail\n5. Youtube\n6. Discord\n7. Telegram\n\n")
+    print("Selamat datang di skrip login otomatis!\n")
+    url_option = input("Silakan pilih URL yang akan diakses:\n1. Facebook\n2. Instagram\n3. Twitter\n4. Gmail\n5. Youtube\n6. Discord\n7. Telegram\n\n")
     url = change_url(url_option)
 
     session = requests.Session()
@@ -66,12 +67,12 @@ def main():
 
     if 'twofactor' in response.url:
         print_colored_text('Login berhasil! Harap matikan autentikasi dua faktor untuk menggunakan skrip ini')
-        with open('result/coki&tokenberhasil.txt', 'w') as f:
+        with open(f'result/{url_option}_success_cookies.txt', 'w') as f:
             for key, value in cookies.items():
                 f.write('%s:%s\n' % (key, value))
     else:
         print_colored_text(f'Gagal login ke {url_option}')
-        with open('result/coki&tokengagal.txt', 'w') as f:
+        with open(f'result/{url_option}_failed_cookies.txt', 'w') as f:
             for key, value in cookies.items():
                 f.write('%s:%s\n' % (key, value))
 
