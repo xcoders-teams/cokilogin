@@ -1,6 +1,19 @@
+![Fxc7](https://cardivo.vercel.app/api?name=xcoders%20team's&description=sabun%20people&image=https://img.freepik.com/free-icon/snakes_318-368381.jpg?size=338&ext=jpg&backgroundColor=%23ecf0f1&github=xcoders-teams&site=https://api-xcoders.site&iconColor=%23595959&fontColor=%23595959&pattern=ticTacToe&colorPattern=%23eaeaea&opacity=1)
+
+---
+<p align="center">
+  <img src="https://img.shields.io/badge/-Python-black?style=plastic&logo=Python" />
+  <img src="https://img.shields.io/badge/-Git-black?style=plastic&logo=git" />
+  <img src="https://img.shields.io/badge/-GitHub-black?style=plastic&logo=github" />
+</p>
+
+---
+
 # cookie-login 
 
 Cookie Login is a Python script for logging into websites using HTTP Cookies and Requests. It allows you to login to various websites using your existing account and store the authentication cookies for future use.
+
+
 ## Installation
 
 1. Clone the repository to your local machine using Git:
@@ -38,12 +51,18 @@ python Run.py
 ## Authors
 
 - [@hans](https://www.github.com/hansalr)
+
 - [@Fxc7](https://www.github.com/Fxc7)
 ## Contributing
 
 Contributions are always welcome!
+
 See `README.md` for ways to get started.
+
 Please adhere to this project's `code of conduct`.
+
+
 ## License
 
 [GNU](https://www.gnu.org/licenses/why-not-lgpl.html)
+
