@@ -4,7 +4,7 @@ import re
 
 # membaca file randua.txt dan menyimpan user-agent ke dalam sebuah list
 with open('ua/randua.txt', 'r') as f:
-    ua_list = f.read().splitlines()
+    ua_list = f.read().split(',')
 
 # memilih user-agent secara acak dari list
 ua = random.choice(ua_list)
